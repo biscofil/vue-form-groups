@@ -1,5 +1,5 @@
 <template lang="pug">
-extends FormGroup.pug
+  extends FormGroup.pug
   block input
     .input-group.input-group-sm.mb-3
       .input-group-prepend(v-bind:class="{ 'is-invalid': hasErrors() }")

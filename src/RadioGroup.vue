@@ -1,5 +1,5 @@
 <template lang="pug">
-extends FormGroup.pug
+  extends FormGroup.pug
   block input
     div
       .form-check(v-for="(id, name) in options")

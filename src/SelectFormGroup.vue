@@ -5,7 +5,7 @@
   -->
 
 <template lang="pug">
-extends FormGroup.pug
+  extends FormGroup.pug
   block input
     vSelect(
       v-bind:name="input_name",

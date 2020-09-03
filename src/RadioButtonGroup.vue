@@ -1,5 +1,5 @@
 <template lang="pug">
-extends FormGroup.pug
+  extends FormGroup.pug
   block input
     .btn-toolbar(role="toolbar", aria-label="Toolbar with button groups")
       .btn-group.mr-2(role="group", aria-label="First group")

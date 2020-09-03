@@ -1,5 +1,5 @@
 <template lang="pug">
-extends FormGroup
+  extends FormGroup
   block input
     label.switch.switch-success
       input.switch-input(type="checkbox", v-model="inputValue")

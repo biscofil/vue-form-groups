@@ -1,5 +1,5 @@
 <template lang="pug">
-extends FormGroup.pug
+  extends FormGroup.pug
   block input
     InputMask.form-control.form-control-sm(
       v-bind:id="input_name",
