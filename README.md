@@ -1,6 +1,13 @@
 Vue form groups
 ===============
 
+Install
+-------
+
+```sh
+npm i biscofil/vue-form-groups
+```
+
 Compile
 -------
 
