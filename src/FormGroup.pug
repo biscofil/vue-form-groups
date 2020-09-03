@@ -1,0 +1,26 @@
+div(:class="col_classes")
+    div.form-group.row.form-group-wrapper
+
+        div(v-if="show_label" :class="label_col_classes")
+            label.col-form-label.text-md-left(v-bind:for='input_name')
+                slot(name="label")
+                    | {{label}}
+                b(v-if="required && show_required" style="color:red")
+                    | &nbsp; *
+
+        div(:class="show_label ? form_col_classes : 'col-sm-12'")
+
+            // validation-provider(:rules='rules' v-slot='{ errors }')
+
+            b(v-if="required && show_required && (!show_label)" style="color:red")
+               | &nbsp; *
+
+            block input
+            //ul(v-if="errors")
+            //    li.text-danger(v-for="error in errors")
+            //       | {{ error }}
+            slot
+
+            ul(v-if="hasErrors()")
+                li.text-danger(v-for="error in getErrors()")
+                    | {{ error }}
