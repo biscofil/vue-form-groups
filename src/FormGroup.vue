@@ -4,20 +4,6 @@
 
 <script>
 
-    /* import {extend, ValidationProvider} from 'vee-validate';
-     import {required} from 'vee-validate/dist/rules';
-     import {email} from 'vee-validate/dist/rules';
-
-     extend('required', {
-         ...required,
-         message: 'Il campo è obbligatorio'
-     });
-
-     extend('email', {
-         ...email,
-         message: 'Il campo deve essere una mail valida'
-     });*/
-
     export default {
 
         props: {
@@ -94,25 +80,12 @@
 
         },
 
-        /* components: {
-             ValidationProvider
-         },*/
-
         data() {
             return {
                 inputValue: this.value,
                 placeholderCalculated: this.placeholder === null ? this.label : this.placeholder,
             }
         },
-
-        /*computed: {
-            rules() {
-                return {
-                    'required': this.required,
-                    'email' : this.type === "email"
-                };
-            }
-        },*/
 
         watch: {
 
