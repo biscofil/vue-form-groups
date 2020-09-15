@@ -10,6 +10,7 @@
       :required="required",
       v-on:keyup="countdown",
       :maxlength="maxlength",
+      :rows="rows",
       v-bind:class="{ 'is-invalid': hasErrors() }",
       :autocomplete="autocomplete"
     )
@@ -34,6 +35,11 @@ export default {
       required: false,
       default: 1000,
     },
+    rows : {
+      type: Number,
+      required: false,
+      default: 2
+    }
   },
 
   data() {
