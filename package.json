@@ -1,6 +1,6 @@
 {
     "name": "vue-form-components",
-    "version": "0.0.1",
+    "version": "0.1.2",
     "description": "Vue form components",
     "scripts": {
         "build": "webpack --config config/webpack.config.js"
