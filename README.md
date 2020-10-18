@@ -22,7 +22,7 @@ Install
 -------
 
 ```sh
-npm i biscofil/vue-form-groups
+npm i biscofil/vue-form-components
 ```
 
 Compile
