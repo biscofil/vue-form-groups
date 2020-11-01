@@ -1,20 +1,65 @@
 Vue form groups (DEV stage)
 ===========================
 
-Vue components that show validation errors returned by async requests.
+Vue components that show validation errors for form inputs.
 
-```vue
+```js
 <template>
-    <v-textbox-form-group
-        :show_label="false"
-        label="Name"
-        input_name="company.name"
-        v-model="company.name"
-        :required="true"
-        :errors="errors"/>
+    <div>
+
+        <TextboxFormGroup
+            :show_label="false"
+            label="Name"
+            input_name="company.name"
+            v-model="company.name"
+            :required="true"
+            :errors="errors"/>
+
+        <TextboxFormGroup
+            :show_label="false"
+            label="Address"
+            input_name="company.address"
+            v-model="company.address"
+            :required="true"
+            :errors="errors"/>
+    </div>
 </template>
 <script>
-import {TextareaFormGroup} from 'vue-form-components/dist/vue-form-components'
+import {TextboxFormGroup} from 'vue-form-components/dist/vue-form-components'
+export default{
+
+    name : "TestComponent",
+
+    components:{
+        TextboxFormGroup
+    },
+
+    data(){
+        return {
+            company : {
+                name : '',
+                address : ''
+            },
+            errors : null
+        }
+    },
+
+    methods:{
+        save(){
+            let self = this;
+            axios.post('url', this.company)
+            .then(response => {
+                // stuff
+            })
+            .catch(e => {
+                if(e.response){
+                    self.errors = e.response.data.errors;
+                }
+            });
+        }
+
+    }
+}
 </script>
 ```
 
