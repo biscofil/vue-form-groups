@@ -4,14 +4,32 @@ Vue form groups (DEV stage)
 Vue components that show validation errors returned by async requests.
 
 ```vue
-<TextboxFormGroup
-    :show_label="false"
-    label="Name"
-    input_name="company.name"
-    v-model="company.name"
-    :required="true"
-    :errors="errors"/>
+<template>
+    <v-textbox-form-group
+        :show_label="false"
+        label="Name"
+        input_name="company.name"
+        v-model="company.name"
+        :required="true"
+        :errors="errors"/>
+</template>
+<script>
+import {TextareaFormGroup} from 'vue-form-components/dist/vue-form-components'
+</script>
 ```
+
+Available components:
+* CheckboxFormGroup
+* FileFormGroup
+* MaskedInputFormGroup
+* PriceFormGroup
+* RadioButtonGroup
+* RadioGroup
+* SelectFormGroup
+* TagsFormGroup
+* TextAreaFormGroup
+* TextboxFormGroup
+* ToggleFormGroup
 
 Each istance of the component will look for `input_name` inside of the `errors` dict and will show a line for each validation error.
 

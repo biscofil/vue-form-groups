@@ -17,19 +17,19 @@ function install(Vue) {
     if (install.installed) return;
     install.installed = true;
 
-    Vue.component("v-form-group", FormGroup);
+    Vue.component("FormGroup", FormGroup);
     //
-    Vue.component("v-checkbox-form-group", CheckboxFormGroup);
-    Vue.component("v-file-form-group", FileFormGroup);
-    Vue.component("v-masked-form-group", MaskedInputFormGroup);
-    Vue.component("v-price-form-group", PriceFormGroup);
-    Vue.component("v-radio-button-form-group", RadioButtonGroup);
-    Vue.component("v-radio-form-group", RadioGroup);
-    Vue.component("v-select-form-group", SelectFormGroup);
-    Vue.component("v-tags-form-group", TagsFormGroup);
-    Vue.component("v-textarea-form-group", TextAreaFormGroup);
-    Vue.component("v-textbox-form-group", TextboxFormGroup);
-    Vue.component("v-toggle-form-group", ToggleFormGroup);
+    Vue.component("CheckboxFormGroup", CheckboxFormGroup);
+    Vue.component("FileFormGroup", FileFormGroup);
+    Vue.component("MaskedInputFormGroup", MaskedInputFormGroup);
+    Vue.component("PriceFormGroup", PriceFormGroup);
+    Vue.component("RadioButtonGroup", RadioButtonGroup);
+    Vue.component("RadioGroup", RadioGroup);
+    Vue.component("SelectFormGroup", SelectFormGroup);
+    Vue.component("TagsFormGroup", TagsFormGroup);
+    Vue.component("TextAreaFormGroup", TextAreaFormGroup);
+    Vue.component("TextboxFormGroup", TextboxFormGroup);
+    Vue.component("ToggleFormGroup", ToggleFormGroup);
 
 }
 
